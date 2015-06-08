@@ -12,6 +12,9 @@ class logrotate {
     owner   => 'root',
     group   => 'root',
     mode    => '0755',
+    recurse => true,
+    force   => true,
+    purge   => true,
     require => Package['logrotate'],
   }
 }
