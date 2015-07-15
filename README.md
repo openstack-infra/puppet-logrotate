@@ -6,7 +6,7 @@ Rotate logfiles using the logrotate::file defined type:
 
 
 include logrotate
-logrotate::file { 'manage_projects.log':
+logrotate::file { 'manage-projects':
   log     => '/var/log/manage_projects.log',
   options => [
     'compress',
@@ -17,4 +17,3 @@ logrotate::file { 'manage_projects.log':
     'copytruncate',
   ],
 }
-

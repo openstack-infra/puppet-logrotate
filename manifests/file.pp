@@ -13,12 +13,13 @@ define logrotate::file (
   # $options should be an array containing 1 or more logrotate
   # directives (e.g. missingok, compress).
   validate_string($options[0])
+  if "/" in $name {
+    fail("logrotate::file instance names must not contain '/'.  See the 'log' parameter to specify the actual log file to rotate.")
+  }
 
   include logrotate
-  # This allows us to handle fully pathed files
-  $escaped_path = regsubst($name, '/', '_', 'G')
 
-  file { "/etc/logrotate.d/${escaped_path}":
+  file { "/etc/logrotate.d/${name}":
     ensure  => $ensure,
     owner   => 'root',
     group   => 'root',
