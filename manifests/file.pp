@@ -15,10 +15,9 @@ define logrotate::file (
   validate_string($options[0])
 
   include logrotate
-  # This allows us to handle fully pathed files
-  $escaped_path = regsubst($name, '/', '_', 'G')
+  # TODO: some puppet to bomb out if '/' is in $name
 
-  file { "/etc/logrotate.d/${escaped_path}":
+  file { "/etc/logrotate.d/${name}":
     ensure  => $ensure,
     owner   => 'root',
     group   => 'root',
