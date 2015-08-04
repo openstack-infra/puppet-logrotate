@@ -14,7 +14,7 @@ define logrotate::file (
   # directives (e.g. missingok, compress).
   validate_string($options[0])
 
-  include logrotate
+  include ::logrotate
   # This allows us to handle fully pathed files
   $escaped_path = regsubst($name, '/', '_', 'G')
 
