@@ -3,11 +3,11 @@
 define logrotate::file (
   $log,
   $options,
-  $ensure=present,
-  $prerotate='undef',
-  $postrotate='undef',
-  $firstaction='undef',
-  $lastaction='undef',
+  $ensure       = present,
+  $firstaction  = 'undef',
+  $lastaction   = 'undef',
+  $postrotate   = 'undef',
+  $prerotate    = 'undef',
 ) {
 
   # $options should be an array containing 1 or more logrotate
