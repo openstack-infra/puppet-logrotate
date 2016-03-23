@@ -1,0 +1,11 @@
+Code-Review+2: yolanda.robla <yolanda.robla-mota@hpe.com>
+Code-Review+1: Ricardo Carrillo Cruz <ricardo.carrillo.cruz@gmail.com>
+Code-Review+1: Kayu Kiang <kayu.kiang@ericsson.com>
+Code-Review+2: Paul Belanger <pabelanger@redhat.com>
+Workflow+1: Paul Belanger <pabelanger@redhat.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 23 Mar 2016 15:23:17 +0000
+Reviewed-on: https://review.openstack.org/295179
+Project: openstack-infra/puppet-logrotate
+Branch: refs/heads/master
